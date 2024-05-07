@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    De onde você é? <input type="text" name="pais" id="ipais">
+    <input type="button" value="Verificar" onclick="clique()">
+    <div id="res">
+    </div>
+    <script>       
+        function clique() {
+            let pais = window.document.getElementById('ipais')
+            let res = window.document.getElementById('res')
+            res.innerHTML = `Você é ${pais}`
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+            } else (pais != 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+            }
+            res.innerHTML += `Bem vindo ao Brasil!`
+        }
+    </script>
+</body>
+</html>
