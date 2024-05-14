@@ -12,13 +12,12 @@
     <div id="res">
     </div>
     <script>       
+        const pais = document.getElementById('ipais')
+        const res = document.getElementById('res')
         function clique() {
-            let pais = window.document.getElementById('ipais')
-            let res = window.document.getElementById('res')
-            res.innerHTML = `Você é ${pais}`
-            if (pais == 'Brasil') {
+            if (pais === 'Brasil') {
                 res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
-            } else (pais != 'Brasil') {
+            } else if (pais != 'Brasil') {
                 res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
             }
             res.innerHTML += `Bem vindo ao Brasil!`
